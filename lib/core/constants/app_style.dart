@@ -27,7 +27,8 @@ class AppStyle {
       border: Border.all(
           color: DIManager.findDep<AppColorsController>().borderTextFieldColor,
           width: 1.w));
-
+  static BoxDecoration circularShape =
+      const BoxDecoration(shape: BoxShape.circle);
   static BoxDecoration greyShadesDecoration = BoxDecoration(
       borderRadius: const BorderRadius.all(Radius.circular(4)),
       border: Border.all(

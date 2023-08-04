@@ -29,9 +29,9 @@ class AppFontSize {
   static double get fontSize_20 => 20 * _scaleFactor;
 
   static double get fontSize_25 => 25 * _scaleFactor;
-
+  static double get fontSize_28 => 28 * _scaleFactor;
   static double get fontSize_30 => 30 * _scaleFactor;
-
+  static double get fontSize_35 => 35 * _scaleFactor;
   static double get fontSize_40 => 40 * _scaleFactor;
 }
 
