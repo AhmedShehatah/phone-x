@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:phone_x/core/di/di_manager.dart';
+import 'package:phone_x/ui/contacts/page/contact_page.dart';
 
 import '../../../core/constants/duration_consts.dart';
 
@@ -50,7 +51,7 @@ class _ParentPageState extends State<ParentPage> {
   }
 
   final List<Widget> _screens = [
-    const Placeholder(),
+    const ContactsPage(),
     const Placeholder(),
     const Placeholder(),
   ];

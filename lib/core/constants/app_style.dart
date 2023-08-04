@@ -268,48 +268,48 @@ class AppStyle {
 
   static TextStyle errorMessageStyle = TextStyle(
     fontSize: AppFontSize.fontSize_12,
-    color: DIManager.findDep<AppColorsController>().darkGreyTextColor,
+    color: DIManager.findDep<AppColorsController>().whiteTextColor,
     height: 2.0,
   );
 
   static TextStyle get smallTitleTextStyle => TextStyle(
         fontSize: AppFontSize.fontSize_13,
-        color: DIManager.findDep<AppColorsController>().darkGreyTextColor,
+        color: DIManager.findDep<AppColorsController>().whiteTextColor,
       );
 
   // 10
   static TextStyle lightSubtitle = TextStyle(
     fontSize: AppFontSize.fontSize_11,
     fontWeight: AppFontWeight.light,
-    color: DIManager.findDep<AppColorsController>().greyTextColor,
+    color: DIManager.findDep<AppColorsController>().whiteTextColor,
   );
 
   // 12
   static TextStyle get defaultStyle => TextStyle(
         fontSize: AppFontSize.fontSize_12,
-        color: DIManager.findDep<AppColorsController>().darkGreyTextColor,
+        color: DIManager.findDep<AppColorsController>().whiteTextColor,
         // height: AppFont.fontHeight,
       );
 
   // 14
   static TextStyle hintMessageStyle = TextStyle(
     fontSize: AppFontSize.fontSize_14,
-    color: DIManager.findDep<AppColorsController>().primaryColor,
+    color: DIManager.findDep<AppColorsController>().whiteTextColor,
     // height: AppFont.fontHeight,
   );
   static TextStyle text14Style = TextStyle(
     fontSize: AppFontSize.fontSize_14,
-    color: DIManager.findDep<AppColorsController>().darkGreyTextColor,
+    color: DIManager.findDep<AppColorsController>().whiteTextColor,
     // height: AppFont.fontHeight,
   );
   static TextStyle text12Style = TextStyle(
     fontSize: AppFontSize.fontSize_13,
-    color: DIManager.findDep<AppColorsController>().darkGreyTextColor,
+    color: DIManager.findDep<AppColorsController>().whiteTextColor,
     // height: AppFont.fontHeight,
   );
   static TextStyle smallTitleStyle = TextStyle(
     fontSize: AppFontSize.fontSize_14,
-    color: DIManager.findDep<AppColorsController>().darkGreyTextColor,
+    color: DIManager.findDep<AppColorsController>().whiteTextColor,
     fontWeight: FontWeight.w500,
   );
   static TextStyle lightGreyText14Style = TextStyle(
@@ -326,41 +326,53 @@ class AppStyle {
 
   static TextStyle tabBarUnselectedLabelStyle = TextStyle(
     fontSize: AppFontSize.fontSize_14,
-    color: DIManager.findDep<AppColorsController>().greyTextColor,
+    color: DIManager.findDep<AppColorsController>().whiteTextColor,
   );
 
   static TextStyle appbarStyle = TextStyle(
     fontSize: AppFontSize.fontSize_18,
-    color: DIManager.findDep<AppColorsController>().black,
+    color: DIManager.findDep<AppColorsController>().whiteTextColor,
     fontWeight: FontWeight.bold,
   );
   // 16
   static TextStyle titleStyle = TextStyle(
     fontSize: AppFontSize.fontSize_16,
-    color: DIManager.findDep<AppColorsController>().darkGreyTextColor,
+    color: DIManager.findDep<AppColorsController>().whiteTextColor,
     fontWeight: FontWeight.bold,
     letterSpacing: 1,
     // height: AppFont.fontHeight,
   );
   static TextStyle lightTitleStyle = TextStyle(
     fontSize: AppFontSize.fontSize_16,
-    color: DIManager.findDep<AppColorsController>().darkGreyTextColor,
+    color: DIManager.findDep<AppColorsController>().whiteTextColor,
     fontWeight: AppFontWeight.light,
+    letterSpacing: 1,
+    // height: AppFont.fontHeight,
+  );
+  static TextStyle normalTitleStyle = TextStyle(
+    fontSize: AppFontSize.fontSize_16,
+    color: DIManager.findDep<AppColorsController>().whiteTextColor,
+    // fontWeight: AppFontWeight.light,
     letterSpacing: 1,
     // height: AppFont.fontHeight,
   );
 
   static TextStyle whiteTextOnButton = TextStyle(
     fontSize: AppFontSize.fontSize_16,
-    color: DIManager.findDep<AppColorsController>().white,
+    color: DIManager.findDep<AppColorsController>().whiteTextColor,
     fontWeight: AppFontWeight.regular,
     // height: AppFont.fontHeight,
   );
   // 18
   static TextStyle bigTitleStyle = TextStyle(
     fontSize: AppFontSize.fontSize_18,
-    color: DIManager.findDep<AppColorsController>().darkGreyTextColor,
+    color: DIManager.findDep<AppColorsController>().whiteTextColor,
     fontWeight: FontWeight.w700,
+  );
+  static TextStyle bigRegularTitleStyle = TextStyle(
+    fontSize: AppFontSize.fontSize_18,
+    color: DIManager.findDep<AppColorsController>().whiteTextColor,
+    fontWeight: AppFontWeight.regular,
   );
 
   static double get appbarElevation => 4.0;

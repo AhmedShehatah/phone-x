@@ -47,6 +47,7 @@ dependencies:
   permission_handler: ^10.4.3
   contacts_service: ^0.6.3
   persistent_bottom_nav_bar: ^5.0.2
+  grouped_list: ^5.1.2
 
 dev_dependencies:
   flutter_test:
