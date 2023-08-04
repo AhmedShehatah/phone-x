@@ -15,7 +15,8 @@ class Dimens {
 
   static double defaultBorderWidth = ScreenHelper.fromWidth55(0.35);
   static double bottomNavBarHeight = 60.h;
-
+  static double iconWidth = 24.w;
+  static double iconHeight = 24.h;
   static double cardBorderRadius = 10.w;
   static double bottomSheetBorderRadius = 15.w;
   static double strokeThikness = 3.w;
