@@ -1,11 +1,16 @@
 import 'package:get_it/get_it.dart';
+import 'package:get_storage/get_storage.dart';
+
+import '../shared_prefs/shared_prefs.dart';
 
 final getIt = GetIt.instance;
 
 class DIManager {
   DIManager._();
 
-  static Future<void> initDI() async {}
+  static Future<void> initDI() async {
+    await _setupSharedPreference();
+  }
 
   static T _injectDep<T extends Object>(T dependency) {
     getIt.registerSingleton<T>(dependency);
@@ -16,8 +21,8 @@ class DIManager {
     return getIt<T>();
   }
 
-  // static _setupSharedPreference() async {
-  //   await GetStorage.init();
-  //   _injectDep(SharedPrefs());
-  // }
+  static _setupSharedPreference() async {
+    await GetStorage.init();
+    _injectDep(SharedPrefs());
+  }
 }
