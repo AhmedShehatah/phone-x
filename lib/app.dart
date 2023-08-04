@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:phone_x/core/navigation/route_generator.dart';
 import 'package:phone_x/core/utils/screen_utils/device_utils.dart';
+import 'package:phone_x/ui/parent/page/parent_page.dart';
 
 import 'core/constants/app_consts.dart';
 import 'core/di/di_manager.dart';
@@ -33,11 +34,11 @@ class _AppState extends State<App> {
               child: child,
             );
           },
-          theme: ThemeData(
-              primaryColor: DIManager.findCC().primaryColor,
-              colorScheme: ColorScheme.fromSwatch()
-                  .copyWith(secondary: DIManager.findCC().primaryColor)),
+          theme: ThemeData.dark(
+            useMaterial3: true,
+          ),
           title: AppConsts.appName,
+          initialRoute: ParentPage.routeName,
         );
       }),
     );

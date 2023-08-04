@@ -4,14 +4,15 @@ import 'package:get/get.dart';
 class AppColorsController {
   AppColorsController();
 
-  final Rx<Color?> _primaryColor = const Color(0xDDD42B1E).obs;
-  final String _primaryColorStr = "#EE3E43";
+  final Rx<Color?> _primaryColor = const Color(0xff3ec478).obs;
+  final String _primaryColorStr = "#3ec478";
 
   Color get primaryColor => _primaryColor.value ?? defaultPrimaryColor;
 
   String get primaryColorStr => _primaryColorStr;
 
   Color black = Colors.black;
+  Color lightBlack = const Color.fromARGB(255, 16, 16, 16);
   Color bottomSheetShadow = const Color(0xFF000019);
   Color greyTextColor = const Color(0xFF505050);
 
@@ -37,7 +38,7 @@ class AppColorsController {
   Color blueLightGreyColor = const Color(0xFFf5f7ff);
 
   Color notSelectedGrey = const Color(0xFF7A8FA6);
-  Color white = Colors.white;
+  Color white = const Color.fromARGB(255, 236, 236, 236);
   Color notaryWhite = const Color(0xFFfbfcff);
   Color darkGreyBorderColor = const Color(0xff4f617d);
   Color jeansBlueColor = const Color(0xffecf1f9);

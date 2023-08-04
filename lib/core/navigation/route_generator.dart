@@ -1,5 +1,6 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:phone_x/ui/parent/page/parent_page.dart';
 
 class RouteGenerator {
   static Route? generateRoutes(RouteSettings settings) {
@@ -30,9 +31,8 @@ class RouteGenerator {
 
   static Widget getPage(RouteSettings settings, args) {
     switch (settings.name) {
-      /// EX
-      // case SplashScreen.routeName:
-      // return const SplashScreen();
+      case ParentPage.routeName:
+        return const ParentPage();
 
       default:
         settings = RouteSettings(
