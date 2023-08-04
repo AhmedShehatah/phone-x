@@ -16,7 +16,7 @@ class AppColorsController {
   Color bottomSheetShadow = const Color(0xFF000019);
   Color greyTextColor = const Color(0xFF505050);
 
-  Color hintTextColor = const Color(0x6666668D);
+  Color hintTextColor = const Color.fromARGB(102, 213, 213, 221);
   Color greyLightTextColor = const Color(0xFFA6A6A6);
   Color navyBlue = const Color(0xAA033B44);
   Color scaffoldBGColor = Colors.white;
@@ -30,11 +30,12 @@ class AppColorsController {
   Color grey = const Color(0xFFF3F3F3);
 
   Color textButtonBackground = const Color(0x00000000);
-  Color defaultPrimaryColor = const Color(0xFF8DCA26);
+  Color defaultPrimaryColor = const Color(0xff3ec478);
 
   Color greenProgressColor = const Color(0xff3ec478);
 
   Color darkGreyTextColor = const Color(0xff1f2630);
+  Color whiteTextColor = Colors.white;
   Color blueLightGreyColor = const Color(0xFFf5f7ff);
 
   Color notSelectedGrey = const Color(0xFF7A8FA6);
