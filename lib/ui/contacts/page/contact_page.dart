@@ -30,7 +30,17 @@ class ContactsPage extends StatelessWidget {
             style: AppStyle.normalTitleStyle,
           ),
           itemBuilder: (context, contact) {
-            return ContactListItem(contact: contact);
+            return Column(
+              children: [
+                ContactListItem(contact: contact),
+                Padding(
+                  padding: EdgeInsets.only(left: ScreenHelper.fromWidth(18)),
+                  child: const Divider(
+                    thickness: 0.1,
+                  ),
+                ),
+              ],
+            );
           },
         ),
       ),
