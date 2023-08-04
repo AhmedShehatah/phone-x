@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:contacts_service/contacts_service.dart';
 import 'package:phone_x/core/constants/app_style.dart';
-import 'package:phone_x/core/constants/dimens.dart';
 import 'package:phone_x/core/di/di_manager.dart';
-import 'package:phone_x/core/utils/ui_utils/vertical_padding.dart';
 
 class ContactListItem extends StatelessWidget {
   final Contact contact;
