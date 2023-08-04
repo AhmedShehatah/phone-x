@@ -1,4 +1,4 @@
-import 'base_states.dart';
+import 'base_state.dart';
 
 class BaseLoadingState extends BaseState {
   final String? message;
