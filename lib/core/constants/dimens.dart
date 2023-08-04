@@ -14,6 +14,7 @@ class Dimens {
       EdgeInsets.symmetric(vertical: 8.h, horizontal: 12.w);
 
   static double defaultBorderWidth = ScreenHelper.fromWidth55(0.35);
+  static double bottomNavBarHeight = 60.h;
 
   static double cardBorderRadius = 10.w;
   static double bottomSheetBorderRadius = 15.w;
