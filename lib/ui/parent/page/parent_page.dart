@@ -4,6 +4,7 @@ import 'package:phone_x/core/constants/dimens.dart';
 import 'package:phone_x/core/di/di_manager.dart';
 import 'package:phone_x/ui/contacts/page/contact_page.dart';
 import 'package:phone_x/ui/dial/page/dial_page.dart';
+import 'package:phone_x/ui/fav/page/fav_page.dart';
 
 import '../../../core/constants/duration_consts.dart';
 
@@ -17,7 +18,7 @@ class ParentPage extends StatefulWidget {
 
 class _ParentPageState extends State<ParentPage> {
   final PersistentTabController _controller =
-      PersistentTabController(initialIndex: 1);
+      PersistentTabController(initialIndex: 2);
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +57,7 @@ class _ParentPageState extends State<ParentPage> {
   final List<Widget> _screens = [
     const ContactsPage(),
     const DialPage(),
-    const Placeholder(),
+    FavPage(),
   ];
   final List<PersistentBottomNavBarItem> _items = [
     PersistentBottomNavBarItem(
