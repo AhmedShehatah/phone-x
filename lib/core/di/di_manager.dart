@@ -36,4 +36,8 @@ class DIManager {
   static AppColorsController findCC() {
     return findDep<AppColorsController>();
   }
+
+  static AppNavigator findNavigator() {
+    return findDep<AppNavigator>();
+  }
 }

@@ -18,7 +18,7 @@ class ParentPage extends StatefulWidget {
 
 class _ParentPageState extends State<ParentPage> {
   final PersistentTabController _controller =
-      PersistentTabController(initialIndex: 2);
+      PersistentTabController(initialIndex: 1);
 
   @override
   Widget build(BuildContext context) {

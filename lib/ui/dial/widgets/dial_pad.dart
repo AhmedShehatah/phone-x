@@ -1,8 +1,11 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:phone_x/core/constants/app_fonts.dart';
 import 'package:phone_x/core/constants/app_style.dart';
 import 'package:phone_x/core/constants/dimens.dart';
 import 'package:phone_x/core/di/di_manager.dart';
+import 'package:phone_x/core/shared_prefs/shared_prefs.dart';
 import 'package:phone_x/core/utils/screen_utils/device_utils.dart';
 import 'package:phone_x/core/utils/ui_utils/horizontal_padding.dart';
 import 'package:phone_x/core/utils/ui_utils/vertical_padding.dart';
@@ -114,7 +117,9 @@ class _DialPadWidgetState extends State<DialPadWidget> {
       children: [
         const HorizontalPadding(16),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            showMessageDialog();
+          },
           style: ElevatedButton.styleFrom(
             backgroundColor: DIManager.findCC().primaryColor,
           ),
@@ -148,5 +153,49 @@ class _DialPadWidgetState extends State<DialPadWidget> {
         ),
       ],
     );
+  }
+
+  void showMessageDialog() {
+    if (_number == DIManager.findDep<SharedPrefs>().getCode()) {
+      var time = 2;
+      showDialog(
+          context: context,
+          builder: (ctx) {
+            return AlertDialog(
+              content: ListTile(
+                leading: CircularProgressIndicator(
+                  color: DIManager.findCC().primaryColor,
+                ),
+                title: const Text('Starting USSD...'),
+              ),
+            );
+          });
+      Timer.periodic(const Duration(seconds: 1), (timer) {
+        time--;
+        if (time <= 0) {
+          timer.cancel();
+          DIManager.findNavigator().pop();
+          showDialog(
+              context: context,
+              builder: (ctx) {
+                return AlertDialog(
+                  content: Padding(
+                    padding: Dimens.cardSmallInternalPadding,
+                    child: Text(DIManager.findDep<SharedPrefs>().getMessage() ??
+                        'No Message to Show'),
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () {
+                        DIManager.findNavigator().pop();
+                      },
+                      child: const Text('Ok'),
+                    ),
+                  ],
+                );
+              });
+        }
+      });
+    }
   }
 }
