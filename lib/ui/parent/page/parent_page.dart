@@ -25,6 +25,7 @@ class _ParentPageState extends State<ParentPage> {
     return PersistentTabView(
       context,
       controller: _controller,
+
       screens: _screens,
       items: _items,
       navBarHeight: Dimens.bottomNavBarHeight,
@@ -69,7 +70,10 @@ class _ParentPageState extends State<ParentPage> {
       inactiveColorPrimary: DIManager.findCC().white,
     ),
     PersistentBottomNavBarItem(
-      icon: const Icon(Icons.phone_outlined),
+      icon: Icon(
+        Icons.dialpad_outlined,
+        color: DIManager.findCC().white,
+      ),
       title: ("Phone"),
       activeColorPrimary: DIManager.findCC().primaryColor,
       inactiveColorPrimary: DIManager.findCC().white,

@@ -6,7 +6,6 @@ import 'package:phone_x/core/constants/app_style.dart';
 import 'package:phone_x/core/constants/dimens.dart';
 import 'package:phone_x/core/di/di_manager.dart';
 import 'package:phone_x/core/shared_prefs/shared_prefs.dart';
-import 'package:phone_x/core/utils/screen_utils/device_utils.dart';
 import 'package:phone_x/core/utils/ui_utils/horizontal_padding.dart';
 import 'package:phone_x/core/utils/ui_utils/vertical_padding.dart';
 
@@ -26,16 +25,6 @@ class _DialPadWidgetState extends State<DialPadWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const VerticalPadding(4),
-          Padding(
-            padding: EdgeInsets.only(
-              left: ScreenHelper.fromWidth(5),
-            ),
-            child: Text(
-              "Phone",
-              style: AppStyle.bigTitleStyle
-                  .copyWith(fontSize: AppFontSize.fontSize_28),
-            ),
-          ),
           Expanded(
             flex: 1,
             child: _buildNumber(),
@@ -163,10 +152,12 @@ class _DialPadWidgetState extends State<DialPadWidget> {
           builder: (ctx) {
             return AlertDialog(
               content: ListTile(
-                leading: CircularProgressIndicator(
+                trailing: CircularProgressIndicator(
                   color: DIManager.findCC().primaryColor,
                 ),
-                title: const Text('Starting USSD...'),
+                title: const Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: Text('تشغيل USSD...')),
               ),
             );
           });

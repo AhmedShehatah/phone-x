@@ -7,7 +7,6 @@ import 'package:phone_x/core/utils/ui_utils/custom_snack_bar.dart';
 import 'package:phone_x/core/utils/ui_utils/vertical_padding.dart';
 
 import '../../../core/constants/app_fonts.dart';
-import '../../../core/utils/screen_utils/device_utils.dart';
 import '../../../core/validators/base_validator.dart';
 import '../../../core/validators/required_validator.dart';
 
@@ -49,7 +48,6 @@ class FavPage extends StatelessWidget {
                 ),
                 const VerticalPadding(5),
                 TextFormField(
-                  autofocus: true,
                   controller: bodyController,
                   keyboardType: TextInputType.multiline,
                   maxLines: null,
